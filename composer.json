@@ -1,5 +1,5 @@
 {
-    "name": "scrumpy/html-to-prosemirror",
+    "name": "17grad/html-to-prosemirror",
     "type": "library",
     "description": "Takes HTML and outputs ProseMirror compatible JSON.",
     "keywords": ["prosemirror"],
