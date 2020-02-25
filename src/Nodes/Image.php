@@ -19,9 +19,34 @@ class Image extends Node
                     'type' => 'link',
                     'attrs' => [
                         'href' => $this->DOMNode->getAttribute('src'),
+                        'class' => $this->getAlignmentClass(),
+                        'alt' => $this->getAltText()
                     ],
                 ],
             ],
         ];
+    }
+
+    private function getAlignmentClass()
+    {
+        if (method_exists($this->DOMNode, 'getAttribute')) {
+            $domClass = $this->DOMNode->getAttribute('class');
+            if (strpos($domClass, 'align-right') !== false) {
+                return 'align-right';
+            } else if (strpos($domClass, 'align-left') !== false) {
+                return 'align-left';
+            }
+        }
+
+        return null;
+    }
+
+    private function getAltText()
+    {
+        if (method_exists($this->DOMNode, 'getAttribute')) {
+            return $this->DOMNode->getAttribute('alt');
+        }
+
+        return null;
     }
 }
