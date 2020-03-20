@@ -14,7 +14,8 @@ class ImageWrap extends Node
             $domClass = $this->DOMNode->getAttribute('class');
             return (strpos($domClass, 'fr-img-space-wrap') !== false ||
                     strpos($domClass, 'fr-img-caption') !== false ||
-                    strpos($domClass, 'fr-img-wrap') !== false);
+                    strpos($domClass, 'fr-img-wrap') !== false || 
+                    strpos($domClass, 'fr-inner') !== false);
         }
 
         return false;

@@ -22,7 +22,7 @@ class Renderer
     ];
 
     protected $nodes = [
-        Nodes\ImageCaption::class,
+        // Nodes\ImageCaption::class,
         Nodes\ImageWrap::class,
         Nodes\BulletList::class,
         Nodes\CodeBlock::class,
